@@ -12,7 +12,7 @@ Opens a single trade sized to a risk percentage you define, then locks itself so
 - A persistent lock (survives removing the EA or restarting MT5 entirely) stops it from ever firing a second trade.
 - If AutoTrading or Algo Trading permissions are off when you attach it, it keeps watching and fires automatically the moment they're switched on.
 
-File: `Position Calculator #.#.mq5`
+File: [`Position Calculator #.#.mq5`](https://github.com/trading4megan/MT5-Trading-Tools/blob/main/Position%20Calulator%203.5.mq5)
 
 ## Risk Monitor
 
@@ -24,7 +24,7 @@ A read-only dashboard that lists every open position on your account and what ea
 - Shows a totals row: combined risk, reward, and floating P/L across everything open.
 - Never sends, modifies, or closes an order — display only.
 
-File: `=Open Trades Tracker.mq5`
+File: [`=Open Trades Tracker.mq5`](https://github.com/trading4megan/MT5-Trading-Tools/blob/main/Open%20Trades%20Tracker.mq5)
 
 ## Install (either tool)
 
