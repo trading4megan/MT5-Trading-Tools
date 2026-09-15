@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Position Calculator — MT5 Trading Tools</title>
+<meta name="description" content="An MT5 Expert Advisor that opens a single trade at a risk percentage you define, then locks itself so it can never fire twice.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <a class="back-link" href="index.html">&larr; MT5 Trading Tools</a>
+  </div>
+</div>
+
+<div class="hero tool-hero">
+  <div class="wrap">
+    <span class="tag amber">Expert Advisor</span>
+    <h1>Set your stop-loss, direction, and risk. It places the trade — once.</h1>
+    <p>Position Calculator turns a risk percentage and a stop-loss price into a properly sized trade, checks your margin and the broker's own limits first, and then locks itself so it can't open a second position — even if you remove the EA or restart MT5 entirely.</p>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="panel amber">
+    <span class="panel-head">POSITION CALCULATOR &nbsp;·&nbsp; AUDCAD, H1</span>
+    <div class="panel-body">
+      <div class="panel-row"><span class="k">Status</span><span class="v"><span class="status-pill armed">ARMED</span></span></div>
+      <div class="panel-row"><span class="k">Direction</span><span class="v">LONG</span></div>
+      <div class="panel-row"><span class="k">Lot Size</span><span class="v">0.42</span></div>
+      <div class="panel-row"><span class="k">Risk $</span><span class="v">25.00</span></div>
+      <div class="panel-row"><span class="k">Take Profit</span><span class="v">1.09540</span></div>
+    </div>
+  </div>
+
+  <section>
+    <h2>What it does</h2>
+    <div class="feature-list">
+      <div class="feature amber-rule">
+        <h3>Single-shot lock</h3>
+        <p>Once a trade fires, a flag stored by the MT5 terminal itself keeps it from ever opening another — surviving removing the EA, closing the chart, even a full restart of MT5.</p>
+      </div>
+      <div class="feature amber-rule">
+        <h3>Risk-based sizing</h3>
+        <p>You set a risk percentage and a stop-loss price; the lot size is calculated from that, then rounded to whatever step, minimum, and maximum your broker actually allows.</p>
+      </div>
+      <div class="feature amber-rule">
+        <h3>Take-profit from R:R</h3>
+        <p>Set a risk:reward ratio and the take-profit price is calculated automatically from your stop-loss distance.</p>
+      </div>
+      <div class="feature amber-rule">
+        <h3>Pre-trade checks</h3>
+        <p>Validates that your stop-loss sits on the correct side of price for the direction chosen, confirms there's enough free margin, and asks for manual confirmation if risk exceeds a threshold you set.</p>
+      </div>
+      <div class="feature amber-rule">
+        <h3>Trading-permission aware</h3>
+        <p>Checks the toolbar AutoTrading button, this EA's own Algo Trading permission, and the account's trading permission. If any is off when you attach it, it keeps watching and fires automatically the moment you switch it on.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Install</h2>
+    <ol class="steps">
+      <li>Download <code>RiskRR_AutoTrade_EA.mq5</code> below.</li>
+      <li>In MT5, open <strong>MetaEditor</strong> (press <code>F4</code>), then use <strong>File &rarr; Open</strong> and browse to your <code>MQL5/Experts</code> folder — or find it faster via MT5's <strong>File &rarr; Open Data Folder</strong>.</li>
+      <li>Place the downloaded file in that <code>Experts</code> folder, then open it in MetaEditor and compile with <code>F7</code>.</li>
+      <li>Back in MT5, refresh the <strong>Navigator</strong> panel (right-click &rarr; Refresh) and find it under Expert Advisors.</li>
+      <li>Drag it onto a chart. Fill in Direction, Stop Loss Price, Risk %, and R:R in the Inputs tab.</li>
+      <li>Make sure the toolbar <strong>AutoTrading</strong> button is on, and <strong>Allow Algo Trading</strong> is checked in the Common tab — the EA will tell you if either is missing.</li>
+    </ol>
+  </section>
+
+  <section>
+    <a class="btn amber" href="downloads/RiskRR_AutoTrade_EA.mq5" download>Download RiskRR_AutoTrade_EA.mq5</a>
+    <span class="btn-sub">.mq5 source file · compile in MetaEditor before use</span>
+  </section>
+
+  <section>
+    <div class="callout">
+      <strong>Before running this live:</strong> test on a demo account first, and re-check the calculated lot size and risk $ against your own numbers a few times. Lot-size math assumes tick value scales linearly with price distance, which holds for most FX pairs but can differ on some indices, metals, or CFDs with non-standard contract specs.
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <a class="back-link" href="index.html">&larr; Back to overview</a>
+  </div>
+</footer>
+
+</body>
+</html>

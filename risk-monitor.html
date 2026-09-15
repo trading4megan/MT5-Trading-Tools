@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Risk Monitor — MT5 Trading Tools</title>
+<meta name="description" content="A read-only MT5 dashboard that lists every open position with committed risk, potential reward, R:R, and live floating P/L.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <a class="back-link" href="index.html">&larr; MT5 Trading Tools</a>
+  </div>
+</div>
+
+<div class="hero tool-hero">
+  <div class="wrap">
+    <span class="tag teal">Expert Advisor · read-only</span>
+    <h1>Every open trade, and exactly what happens if it hits target — or stop.</h1>
+    <p>Risk Monitor sits on one chart and lists every position open on your account, whatever symbol it's on. Risk and reward are measured from each trade's entry price, so the numbers stay fixed — they only move if you actually change the stop-loss or take-profit.</p>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="panel teal">
+    <span class="panel-head">OPEN TRADES</span>
+    <div class="panel-body">
+      <table class="mini-table">
+        <tr><th>Symbol</th><th>Type</th><th>Lot</th><th>Risk $</th><th>Reward $</th><th>R:R</th><th>P/L</th></tr>
+        <tr><td>EURUSD</td><td>Buy</td><td>0.50</td><td>40.00</td><td>80.00</td><td>2.00</td><td style="color:var(--teal)">+12.40</td></tr>
+        <tr><td>GBPUSD</td><td>Sell</td><td>0.20</td><td>15.00</td><td>30.00</td><td>2.00</td><td style="color:var(--red)">-4.10</td></tr>
+        <tr><td>XAUUSD</td><td>Buy</td><td>0.10</td><td>No SL</td><td>60.00</td><td>-</td><td style="color:var(--teal)">+2.00</td></tr>
+        <tr class="totals"><td>TOTAL</td><td></td><td></td><td>55.00</td><td>170.00</td><td></td><td style="color:var(--teal)">+10.30</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <section>
+    <h2>What it does</h2>
+    <div class="feature-list">
+      <div class="feature teal-rule">
+        <h3>Account-wide view</h3>
+        <p>Lists every open position across all symbols, whether it was opened manually or by another EA — not just what's on the current chart.</p>
+      </div>
+      <div class="feature teal-rule">
+        <h3>Committed risk and reward</h3>
+        <p>Risk $ and Reward $ are calculated from your entry price to the stop-loss and take-profit. They stay static as price moves, and only change if you move the SL or TP yourself.</p>
+      </div>
+      <div class="feature teal-rule">
+        <h3>Missing-stop warning</h3>
+        <p>Any trade without a stop-loss or take-profit is flagged clearly ("No SL" / "No TP") instead of silently showing a zero.</p>
+      </div>
+      <div class="feature teal-rule">
+        <h3>Portfolio totals</h3>
+        <p>A totals row sums risk, reward, and floating profit/loss across everything open, for a quick read on total account exposure.</p>
+      </div>
+      <div class="feature teal-rule">
+        <h3>Read-only</h3>
+        <p>This EA never sends, modifies, or closes an order — it only reads position data and draws a panel. Safe to run alongside any other EA or manual trading.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Install</h2>
+    <ol class="steps">
+      <li>Download <code>OpenTrades_RiskMonitor.mq5</code> below.</li>
+      <li>In MT5, open <strong>MetaEditor</strong> (press <code>F4</code>), then use <strong>File &rarr; Open</strong> and browse to your <code>MQL5/Experts</code> folder — or find it faster via MT5's <strong>File &rarr; Open Data Folder</strong>.</li>
+      <li>Place the downloaded file in that <code>Experts</code> folder, then open it in MetaEditor and compile with <code>F7</code>.</li>
+      <li>Back in MT5, refresh the <strong>Navigator</strong> panel (right-click &rarr; Refresh) and find it under Expert Advisors.</li>
+      <li>Drag it onto any one chart. No inputs to configure — it starts listing your open trades immediately.</li>
+    </ol>
+  </section>
+
+  <section>
+    <a class="btn teal" href="downloads/OpenTrades_RiskMonitor.mq5" download>Download OpenTrades_RiskMonitor.mq5</a>
+    <span class="btn-sub">.mq5 source file · compile in MetaEditor before use</span>
+  </section>
+
+  <section>
+    <div class="callout">
+      <strong>Worth knowing:</strong> the money conversion uses each symbol's own broker-reported tick value, accurate for the vast majority of FX pairs. A handful of exotic instruments (some stock or futures CFDs with non-linear contract specs) can throw that off slightly — worth a quick sanity check against your broker's own figures.
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <a class="back-link" href="index.html">&larr; Back to overview</a>
+  </div>
+</footer>
+
+</body>
+</html>

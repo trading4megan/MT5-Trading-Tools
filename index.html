@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MT5 Trading Tools</title>
+<meta name="description" content="Two lightweight MT5 Expert Advisors: a single-shot risk calculator that opens one trade at a defined risk, and a read-only monitor for every open position.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span class="wordmark"><strong>MT5</strong> Trading Tools</span>
+  </div>
+</div>
+
+<div class="hero">
+  <div class="wrap">
+    <h1>MT5 tools for traders who size every trade before it happens</h1>
+    <p>Two free, open-source Expert Advisors. One opens a single trade at a risk you define and then locks itself. The other watches everything you already have open, and what happens if each one hits stop or target.</p>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="toolgrid">
+
+    <a class="tool-card panel amber" href="position-calculator.html">
+      <span class="panel-head">POSITION CALCULATOR</span>
+      <div class="panel-body">
+        <div class="panel-row"><span class="k">Status</span><span class="v"><span class="status-pill armed">ARMED</span></span></div>
+        <div class="panel-row"><span class="k">Direction</span><span class="v">LONG</span></div>
+        <div class="panel-row"><span class="k">Lot Size</span><span class="v">0.42</span></div>
+        <div class="panel-row"><span class="k">Risk $</span><span class="v">25.00</span></div>
+        <div class="panel-row"><span class="k">Take Profit</span><span class="v">1.09540</span></div>
+      </div>
+      <p style="padding:0 22px 4px">Enter direction, stop-loss, and risk percent. It opens one trade, then locks so it can't fire twice — even after MT5 restarts.</p>
+      <span class="view" style="padding:0 22px; display:block; padding-bottom:20px;">View tool</span>
+    </a>
+
+    <a class="tool-card panel teal" href="risk-monitor.html">
+      <span class="panel-head">OPEN TRADES</span>
+      <div class="panel-body">
+        <table class="mini-table">
+          <tr><th>Symbol</th><th>Type</th><th>Lot</th><th>Risk $</th><th>Reward $</th><th>R:R</th><th>P/L</th></tr>
+          <tr><td>EURUSD</td><td>Buy</td><td>0.50</td><td>40.00</td><td>80.00</td><td>2.00</td><td style="color:var(--teal)">+12.40</td></tr>
+          <tr><td>GBPUSD</td><td>Sell</td><td>0.20</td><td>15.00</td><td>30.00</td><td>2.00</td><td style="color:var(--red)">-4.10</td></tr>
+          <tr class="totals"><td>TOTAL</td><td></td><td></td><td>55.00</td><td>110.00</td><td></td><td style="color:var(--teal)">+8.30</td></tr>
+        </table>
+      </div>
+      <p style="padding:0 22px 4px">A read-only dashboard listing every open position account-wide, with risk and reward measured from your entry price — not the live price — so the numbers don't drift as the market moves.</p>
+      <span class="view" style="padding:0 22px; display:block; padding-bottom:20px;">View tool</span>
+    </a>
+
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    Provided as-is for personal use. Test on a demo account before running either tool live.
+  </div>
+</footer>
+
+</body>
+</html>
