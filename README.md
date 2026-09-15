@@ -24,7 +24,7 @@ A read-only dashboard that lists every open position on your account and what ea
 - Shows a totals row: combined risk, reward, and floating P/L across everything open.
 - Never sends, modifies, or closes an order — display only.
 
-File: [`=Open Trades Tracker.mq5`](https://github.com/trading4megan/MT5-Trading-Tools/blob/main/Open%20Trades%20Tracker.mq5)
+File: [`Open Trades Tracker.mq5`](https://github.com/trading4megan/MT5-Trading-Tools/blob/main/Open%20Trades%20Tracker.mq5)
 
 ## Install (either tool)
 
