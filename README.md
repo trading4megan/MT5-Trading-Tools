@@ -39,6 +39,4 @@ File: [`Open Trades Tracker.mq5`](https://github.com/trading4megan/MT5-Trading-T
 Test on a demo account first. Lot-size and risk-money calculations rely on each symbol's broker-reported tick value, which is accurate for the vast majority of FX pairs but can be slightly off for some indices, metals, or CFDs with non-standard contract specs.
 
 
-Note: use at you own risk
-not for financial advise
-
+NOTE: These Expert Advisors are provided for research and development purposes only. They are not financial advice and come with no guarantees of performance or reliability. Use entirely at your own risk. The author accepts no responsibility for any financial losses incurred through the use of these tools. Always test thoroughly on a demo account before considering any live deployment.
